@@ -226,25 +226,25 @@ namespace DynamicArrayTests
 
 		}
 
-	//	TEST_METHOD(l_operateur_egal_devrait_copier_tout_le_contenu_d_un_dynamicArray)
-	//	{
-	//		//Arrange
-	//		const int CAPACITE = 5;
-	//		DynamicArray tableau1(CAPACITE);
-	//		DynamicArray tableau2;
+		TEST_METHOD(l_operateur_egal_devrait_copier_tout_le_contenu_d_un_dynamicArray)
+		{
+			//Arrange
+			const int CAPACITE = 5;
+			DynamicArray tableau1(CAPACITE);
+			DynamicArray tableau2;
 
-	//		for (unsigned int i = 0; i < CAPACITE; ++i)
-	//		{
-	//			tableau1.setElement(i, i*i);
-	//		}
+			for (unsigned int i = 0; i < CAPACITE; ++i)
+			{
+				tableau1.setElement(i, i*i);
+			}
 
-	//		//Action
-	//		tableau2 = tableau1;
+			//Action
+			tableau2 = tableau1;
 
 
-	//		//Assert
-	//		AssertDynamicArraysAreEqual(tableau1, tableau2);
-	//	}
+			//Assert
+			AssertDynamicArraysAreEqual(tableau1, tableau2);
+		}
 
 	//	TEST_METHOD(etant_donne_deux_dynamicArrays_identiques_l_operateur_d_egalite_devrait_retourner_vrai)
 	//	{
