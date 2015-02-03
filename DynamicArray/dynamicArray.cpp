@@ -43,7 +43,7 @@ void DynamicArray::setCapacite(unsigned int _nouvelleCapacite)
 	}
 	else
 	{
-		int* nouveauTableauElements = new int[];
+		int* nouveauTableauElements = new int[_nouvelleCapacite];
 		
 		for (unsigned int i = 0; i < std::min(capacite, _nouvelleCapacite); i++)
 		{
@@ -57,6 +57,7 @@ void DynamicArray::setCapacite(unsigned int _nouvelleCapacite)
 
 		delete[] tabElements;
 		tabElements = nouveauTableauElements;
+		capacite = _nouvelleCapacite;
 	}
 }
 
