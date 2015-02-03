@@ -106,37 +106,37 @@ namespace DynamicArrayTests
 			}
 		}
 
-		//TEST_METHOD(ajouter_un_element_au_dela_de_la_capacite_devrait_auto_agrandir_le_dynamicArray)
-		//{
-		//	//Arrange
-		//	const int CAPACITE_DEPART = 5;
-		//	const int NOUVELLE_ELEMENT = 99;
-		//	const int INDEX_NOUVEL_ELEMENT = 10;
-		//	DynamicArray tableau(CAPACITE_DEPART);
+		TEST_METHOD(ajouter_un_element_au_dela_de_la_capacite_devrait_auto_agrandir_le_dynamicArray)
+		{
+			//Arrange
+			const int CAPACITE_DEPART = 5;
+			const int NOUVELLE_ELEMENT = 99;
+			const int INDEX_NOUVEL_ELEMENT = 10;
+			DynamicArray tableau(CAPACITE_DEPART);
 
-		//	for (unsigned int i = 0; i < CAPACITE_DEPART; ++i)
-		//	{
-		//		tableau.setElement(i, i*i);
-		//	}
+			for (unsigned int i = 0; i < CAPACITE_DEPART; ++i)
+			{
+				tableau.setElement(i, i*i);
+			}
 
-		//	//Action
-		//	tableau.setElement(INDEX_NOUVEL_ELEMENT, NOUVELLE_ELEMENT);
+			//Action
+			tableau.setElement(INDEX_NOUVEL_ELEMENT, NOUVELLE_ELEMENT);
 
-		//	//Assert
-		//	// Est-ce que les anciens éléments sont conservés ?
-		//	for (unsigned int i = 0; i < CAPACITE_DEPART; ++i)
-		//	{
-		//		Assert::AreEqual(int(i*i), tableau.getElement(i));
-		//	}
-		//	// Est-ce que les éléments vides sont initialisés à 0 ?
-		//	for (unsigned int i = CAPACITE_DEPART; i < INDEX_NOUVEL_ELEMENT; ++i)
-		//	{
-		//		Assert::AreEqual(0, tableau.getElement(i));
-		//	}
-		//	// Est-ce que le nouvel élément a été ajouté
-		//	Assert::AreEqual(NOUVELLE_ELEMENT, tableau.getElement(INDEX_NOUVEL_ELEMENT));
-		//	Assert::AreEqual(INDEX_NOUVEL_ELEMENT + 1, tableau.getCapacite());
-		//}
+			//Assert
+			// Est-ce que les anciens éléments sont conservés ?
+			for (unsigned int i = 0; i < CAPACITE_DEPART; ++i)
+			{
+				Assert::AreEqual(int(i*i), tableau.getElement(i));
+			}
+			// Est-ce que les éléments vides sont initialisés à 0 ?
+			for (unsigned int i = CAPACITE_DEPART; i < INDEX_NOUVEL_ELEMENT; ++i)
+			{
+				Assert::AreEqual(0, tableau.getElement(i));
+			}
+			// Est-ce que le nouvel élément a été ajouté
+			Assert::AreEqual(NOUVELLE_ELEMENT, tableau.getElement(INDEX_NOUVEL_ELEMENT));
+			Assert::AreEqual(INDEX_NOUVEL_ELEMENT + 1, tableau.getCapacite());
+		}
 
 
 		//TEST_METHOD(creer_un_dynamicArray_d_une_capacite_inferieure_a_1_devrait_lancer_une_excpetion)
