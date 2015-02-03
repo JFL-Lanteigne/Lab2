@@ -82,29 +82,29 @@ namespace DynamicArrayTests
 			}
 		}
 
-		//TEST_METHOD(diminuer_la_capacite_d_un_dynamicArray_devrait_modifier_sa_capacite)
-		//{
-		//	//Arrange
-		//	const int CAPACITE_DEPART = 5;
-		//	const int NOUVELLE_CAPACITE = 3;
+		TEST_METHOD(diminuer_la_capacite_d_un_dynamicArray_devrait_modifier_sa_capacite)
+		{
+			//Arrange
+			const int CAPACITE_DEPART = 5;
+			const int NOUVELLE_CAPACITE = 3;
 
-		//	DynamicArray tableau(CAPACITE_DEPART);
+			DynamicArray tableau(CAPACITE_DEPART);
 
-		//	for (unsigned int i = 0; i < CAPACITE_DEPART; ++i)
-		//	{
-		//		tableau.setElement(i, i*i);
-		//	}
+			for (unsigned int i = 0; i < CAPACITE_DEPART; ++i)
+			{
+				tableau.setElement(i, i*i);
+			}
 
-		//	//Action
-		//	tableau.setCapacite(NOUVELLE_CAPACITE);
+			//Action
+			tableau.setCapacite(NOUVELLE_CAPACITE);
 
-		//	//Assert
-		//	Assert::AreEqual(NOUVELLE_CAPACITE, tableau.getCapacite());
-		//	for (unsigned int i = 0; i < NOUVELLE_CAPACITE; ++i)
-		//	{
-		//		Assert::AreEqual(int(i*i), tableau.getElement(i));
-		//	}
-		//}
+			//Assert
+			Assert::AreEqual(NOUVELLE_CAPACITE, tableau.getCapacite());
+			for (unsigned int i = 0; i < NOUVELLE_CAPACITE; ++i)
+			{
+				Assert::AreEqual(int(i*i), tableau.getElement(i));
+			}
+		}
 
 		//TEST_METHOD(ajouter_un_element_au_dela_de_la_capacite_devrait_auto_agrandir_le_dynamicArray)
 		//{

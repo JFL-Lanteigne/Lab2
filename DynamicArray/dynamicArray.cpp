@@ -73,7 +73,7 @@ int DynamicArray::getElement(unsigned int _index) const
 	}
 }
 
-unsigned int DynamicArray::getCapacite() const
+int DynamicArray::getCapacite() const
 {
 	return capacite;
 }
