@@ -41,19 +41,19 @@ namespace DynamicArrayTests
 		}
 
 
-		//TEST_METHOD(setElement_devrait_initialiser_un_element_du_dynamicArray)
-		//{
-		//	//Arrange
-		//	const int NOUVELLE_VALEUR_ELEMENT = 99;
-		//	const int INDEX_ELEMENT = 1;
-		//	DynamicArray tableau;
+		TEST_METHOD(setElement_devrait_initialiser_un_element_du_dynamicArray)
+		{
+			//Arrange
+			const int NOUVELLE_VALEUR_ELEMENT = 99;
+			const int INDEX_ELEMENT = 1;
+			DynamicArray tableau;
 
-		//	//Action
-		//	tableau.setElement(INDEX_ELEMENT, NOUVELLE_VALEUR_ELEMENT);
+			//Action
+			tableau.setElement(INDEX_ELEMENT, NOUVELLE_VALEUR_ELEMENT);
 
-		//	//Assert
-		//	Assert::AreEqual(NOUVELLE_VALEUR_ELEMENT, tableau.getElement(INDEX_ELEMENT));
-		//}
+			//Assert
+			Assert::AreEqual(NOUVELLE_VALEUR_ELEMENT, tableau.getElement(INDEX_ELEMENT));
+		}
 
 		//TEST_METHOD(augumenter_la_capacite_d_un_dynamicArray_devrait_preserver_le_contenu_deja_present)
 		//{
