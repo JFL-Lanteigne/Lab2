@@ -20,6 +20,32 @@ DynamicArray::DynamicArray(unsigned int _nbElements)
 	}
 }
 
+DynamicArray::DynamicArray(const DynamicArray& _source)
+{
+	tabElements = new int[_source.capacite];
+	capacite = _source.capacite;
+
+	for (unsigned int i = 0; i < capacite; i++)
+	{
+		tabElements[i] = _source.tabElements[i];
+	}
+}
+
+//DynamicArray& DynamicArray::operator=(const DynamicArray& _source)
+//{
+//	
+//}
+
+//bool DynamicArray::operator==(const DynamicArray& _rhs) const
+//{
+//
+//}
+
+//DynamicArray& DynamicArray::operator+=(const DynamicArray& _rhs)
+//{
+//
+//}
+
 DynamicArray::~DynamicArray()
 {
 	delete[] tabElements;
