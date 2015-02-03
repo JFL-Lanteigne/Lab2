@@ -181,25 +181,25 @@ namespace DynamicArrayTests
 			Assert::IsTrue(exceptionThrown);
 		}
 
-		//TEST_METHOD(modifier_la_capacite_d_un_dynamicArray_avec_une_valeur_inferieure_a_1_devrait_lancer_une_excpetion)
-		//{
-		//	//Arrange
-		//	bool exceptionThrown = false;
-		//	DynamicArray tableau;
+		TEST_METHOD(modifier_la_capacite_d_un_dynamicArray_avec_une_valeur_inferieure_a_1_devrait_lancer_une_excpetion)
+		{
+			//Arrange
+			bool exceptionThrown = false;
+			DynamicArray tableau;
 
-		//	//Action
-		//	try
-		//	{
-		//		tableau.setCapacite(0);
-		//	}
-		//	catch (std::invalid_argument ex)
-		//	{
-		//		exceptionThrown = true;
-		//	}
+			//Action
+			try
+			{
+				tableau.setCapacite(0);
+			}
+			catch (std::invalid_argument ex)
+			{
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 
 		/////////////////////////////////////////////////
 		// PARTIE 2 (lab 3)
