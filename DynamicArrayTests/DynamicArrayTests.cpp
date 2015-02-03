@@ -159,27 +159,27 @@ namespace DynamicArrayTests
 		}
 
 
-		//TEST_METHOD(acceder_a_un_element_hors_du_tableau_devrait_lancer_une_excpetion)
-		//{
-		//	//Arrange
-		//	bool exceptionThrown = false;
-		//	const int CAPACITE = 5;
+		TEST_METHOD(acceder_a_un_element_hors_du_tableau_devrait_lancer_une_excpetion)
+		{
+			//Arrange
+			bool exceptionThrown = false;
+			const int CAPACITE = 5;
 
-		//	DynamicArray tableau(CAPACITE);
+			DynamicArray tableau(CAPACITE);
 
-		//	//Action
-		//	try
-		//	{
-		//		int element = tableau.getElement(CAPACITE + 1);
-		//	}
-		//	catch (std::out_of_range ex)
-		//	{
-		//		exceptionThrown = true;
-		//	}
+			//Action
+			try
+			{
+				int element = tableau.getElement(CAPACITE + 1);
+			}
+			catch (std::out_of_range ex)
+			{
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 
 		//TEST_METHOD(modifier_la_capacite_d_un_dynamicArray_avec_une_valeur_inferieure_a_1_devrait_lancer_une_excpetion)
 		//{
