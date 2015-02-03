@@ -139,24 +139,24 @@ namespace DynamicArrayTests
 		}
 
 
-		//TEST_METHOD(creer_un_dynamicArray_d_une_capacite_inferieure_a_1_devrait_lancer_une_excpetion)
-		//{
-		//	//Arrange
-		//	bool exceptionThrown = false;
+		TEST_METHOD(creer_un_dynamicArray_d_une_capacite_inferieure_a_1_devrait_lancer_une_excpetion)
+		{
+			//Arrange
+			bool exceptionThrown = false;
 
-		//	//Action
-		//	try
-		//	{
-		//		DynamicArray tableau(0);
-		//	}
-		//	catch (std::invalid_argument ex)
-		//	{
-		//		exceptionThrown = true;
-		//	}
+			//Action
+			try
+			{
+				DynamicArray tableau(0);
+			}
+			catch (std::invalid_argument ex)
+			{
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 
 
 		//TEST_METHOD(acceder_a_un_element_hors_du_tableau_devrait_lancer_une_excpetion)
