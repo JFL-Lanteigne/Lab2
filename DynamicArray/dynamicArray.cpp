@@ -48,10 +48,27 @@ DynamicArray& DynamicArray::operator=(const DynamicArray& _source)
 	return *this;
 }
 
-//bool DynamicArray::operator==(const DynamicArray& _rhs) const
-//{
-//
-//}
+bool DynamicArray::operator==(const DynamicArray& _rhs) const
+{
+	bool memeTableau = false;
+
+	if (capacite == _rhs.capacite)
+	{
+		for (unsigned int i = 0; i < capacite; i++)
+		{
+			if (tabElements[i] != _rhs.tabElements[i])
+			{
+				return false;
+			}
+			else
+			{
+				memeTableau = true;
+			}
+		}
+	}
+
+	return memeTableau;
+}
 
 //DynamicArray& DynamicArray::operator+=(const DynamicArray& _rhs)
 //{
