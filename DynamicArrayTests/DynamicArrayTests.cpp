@@ -301,15 +301,15 @@ namespace DynamicArrayTests
 			Assert::IsTrue(tableau1 == tableau2);
 		}
 
-	//	TEST_METHOD(etant_donne_deux_dynamicArrays_de_capacite_differente_l_operateur_d_egalite_devrait_retourner_faux)
-	//	{
-	//		//Arrange
-	//		DynamicArray tableau1(2);
-	//		DynamicArray tableau2(3);
+		TEST_METHOD(etant_donne_deux_dynamicArrays_de_capacite_differente_l_operateur_d_egalite_devrait_retourner_faux)
+		{
+			//Arrange
+			DynamicArray tableau1(2);
+			DynamicArray tableau2(3);
 
-	//		//Action-Assert
-	//		Assert::IsFalse(tableau1 == tableau2);
-	//	}
+			//Action-Assert
+			Assert::IsFalse(tableau1 == tableau2);
+		}
 
 	//	TEST_METHOD(etant_donne_deux_dynamicArrays_de_capacite_egale_mais_de_contenu_different_l_operateur_d_egalite_devrait_retourner_faux)
 	//	{
