@@ -70,10 +70,21 @@ bool DynamicArray::operator==(const DynamicArray& _rhs) const
 	return memeTableau;
 }
 
-//DynamicArray& DynamicArray::operator+=(const DynamicArray& _rhs)
-//{
-//
-//}
+DynamicArray& DynamicArray::operator+=(const DynamicArray& _rhs)
+{
+	int ancienneCapacite = capacite;
+	int nouvelleCapacite = ancienneCapacite + _rhs.capacite;
+	int capaciteTableauAconcatener = _rhs.capacite;
+
+	setCapacite(nouvelleCapacite);
+
+	for (unsigned int i = 0; i < capaciteTableauAconcatener; i++)
+	{
+		tabElements[ancienneCapacite + i] = _rhs.tabElements[i];
+	}
+
+	return *this;
+}
 
 DynamicArray::~DynamicArray()
 {
